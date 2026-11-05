@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS triagem CHARACTER SET utf8mb4;
+USE triagem;
+
+CREATE TABLE IF NOT EXISTS emails_triados (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email_original TEXT NOT NULL,
+  categoria VARCHAR(30) NOT NULL,
+  resumo VARCHAR(500) NOT NULL,
+  resposta_sugerida TEXT NOT NULL,
+  criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
